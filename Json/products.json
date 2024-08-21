@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Iphone 13 Pro",
+    "description": "The iPhone 13 Pro features a stunning Super Retina XDR display, advanced A15 Bionic chip for exceptional performance, and a triple-camera system that captures beautiful photos and videos in any lighting condition.",
+    "price": 1000,
+    "image": "./images/p6.png",
+    "rating": 5,
+    "category": "Smartphones",
+    "quantity": 85
+  },
+  {
+    "id": 2,
+    "name": "Airpods",
+    "description": "AirPods deliver an unparalleled listening experience with all your devices, featuring wireless simplicity and high-quality sound.",
+    "price": 100,
+    "image": "./images/a1.png",
+    "rating": 5,
+    "category": "Accessories",
+    "quantity": 45
+  },
+  {
+    "id": 3,
+    "name": "Laptop",
+    "description": "This laptop offers a powerful performance for work and play, with a sleek design and long-lasting battery life.",
+    "price": 200,
+    "image": "./images/laptop2.png",
+    "rating": 5,
+    "category": "Computers",
+    "quantity": 30
+  },
+  {
+    "id": 4,
+    "name": "Ipad",
+    "description": "The iPad is a versatile device that can handle any task, from creative projects to productivity work.",
+    "price": 300,
+    "image": "./images/t1.png",
+    "rating": 5,
+    "category": "Tablets",
+    "quantity": 60
+  },
+  {
+    "id": 5,
+    "name": "Smart Watch",
+    "description": "This smart watch keeps you connected, with notifications, fitness tracking, and a variety of apps to suit your lifestyle.",
+    "price": 50.60,
+    "image": "./images/w1.png",
+    "rating": 5,
+    "category": "Wearables",
+    "quantity": 25
+  },
+  {
+    "id": 6,
+    "name": "PC Monitor",
+    "description": "This PC monitor delivers crisp and clear visuals for all your computing needs, whether you're working or gaming.",
+    "price": 600,
+    "image": "./images/pcm1.png",
+    "rating": 5,
+    "category": "Monitors",
+    "quantity": 95
+  },
+  {
+    "id": 7,
+    "name": "iPhone X",
+    "description": "The iPhone X is a high-performance smartphone with an edge-to-edge display and advanced Face ID technology.",
+    "price": 500,
+    "image": "./images/phone1.png",
+    "rating": 5,
+    "category": "Smartphones",
+    "quantity": 70
+  },
+  {
+    "id": 8,
+    "name": "Headphone",
+    "description": "These headphones provide immersive sound quality, noise cancellation, and a comfortable fit for long listening sessions.",
+    "price": 60,
+    "image": "./images/h1.png",
+    "rating": 5,
+    "category": "Audio",
+    "quantity": 50
+  },
+  {
+    "id": 9,
+    "name": "Washing Machine",
+    "description": "This washing machine offers efficient cleaning with multiple wash settings and a large capacity for all your laundry needs.",
+    "price": 100.50,
+    "image": "./images/pr1.png",
+    "rating": 5,
+    "category": "Home Appliances",
+    "quantity": 40
+  },
+  {
+    "id": 10,
+    "name": "AC",
+    "description": "This air conditioner provides powerful cooling with energy-efficient technology, keeping your home comfortable all year round.",
+    "price": 500,
+    "image": "./images/pr2.png",
+    "rating": 5,
+    "category": "Home Appliances",
+    "quantity": 20
+  },
+  {
+    "id": 11,
+    "name": "Microwave Oven",
+    "description": "This microwave oven offers quick and even heating with a variety of cooking presets and a spacious interior.",
+    "price": 200.30,
+    "image": "./images/pr3.png",
+    "rating": 5,
+    "category": "Kitchen Appliances",
+    "quantity": 75
+  },
+  {
+    "id": 12,
+    "name": "Fridge",
+    "description": "This fridge provides ample storage space with adjustable shelves and a high-efficiency cooling system.",
+    "price": 300,
+    "image": "./images/pr4.png",
+    "rating": 5,
+    "category": "Kitchen Appliances",
+    "quantity": 55
+  },
+  {
+    "id": 13,
+    "name": "Fan",
+    "description": "This fan offers powerful airflow with multiple speed settings and a quiet operation, perfect for any room.",
+    "price": 50.60,
+    "image": "./images/pr5.png",
+    "rating": 5,
+    "category": "Home Appliances",
+    "quantity": 30
+  },
+  {
+    "id": 14,
+    "name": "Fridge",
+    "description": "This fridge provides ample storage space with adjustable shelves and a high-efficiency cooling system.",
+    "price": 1500,
+    "image": "./images/pr6.png",
+    "rating": 5,
+    "category": "Kitchen Appliances",
+    "quantity": 90
+  },
+  {
+    "id": 15,
+    "name": "Gaming PC",
+    "description": "This gaming PC delivers high performance with the latest hardware, perfect for immersive gaming experiences.",
+    "price": 500.60,
+    "image": "./images/pr7.png",
+    "rating": 5,
+    "category": "Computers",
+    "quantity": 35
+  },
+  {
+    "id": 16,
+    "name": "Monitor",
+    "description": "This monitor offers vibrant colors and sharp details, ideal for work, entertainment, and gaming.",
+    "price": 250,
+    "image": "./images/pr8.png",
+    "rating": 5,
+    "category": "Monitors",
+    "quantity": 100
+  },
+  {
+    "id": 17,
+    "name": "Smart Watch",
+    "description": "This smart watch keeps you connected, with notifications, fitness tracking, and a variety of apps to suit your lifestyle.",
+    "price": 30.20,
+    "image": "./images/pr9.png",
+    "rating": 5,
+    "category": "Wearables",
+    "quantity": 60
+  },
+  {
+    "id": 18,
+    "name": "Power Bank",
+    "description": "This power bank provides portable charging for your devices, with a high-capacity battery and multiple USB ports.",
+    "price": 100.50,
+    "image": "./images/pr10.png",
+    "rating": 5,
+    "category": "Accessories",
+    "quantity": 25
+  },
+  {
+    "id": 19,
+    "name": "Gaming Mouse",
+    "description": "This gaming mouse features precise tracking, customizable buttons, and ergonomic design for a superior gaming experience.",
+    "price": 30,
+    "image": "./images/pr11.png",
+    "rating": 5,
+    "category": "Accessories",
+    "quantity": 15
+  },
+  {
+    "id": 20,
+    "name": "Joysticks",
+    "description": "These joysticks offer precise control and a comfortable grip, perfect for gaming and flight simulation.",
+    "price": 150,
+    "image": "./images/pr12.png",
+    "rating": 5,
+    "category": "Accessories",
+    "quantity": 65
+  }
+]

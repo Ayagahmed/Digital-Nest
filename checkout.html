@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Nest</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts links -->
+
+    <style>
+      .totals .totals-item label {
+        text-align: left;
+      }
+      .alertstyle {
+        width: 50%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    
+   
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" id="logo"
+          ><span id="span1">D</span>igital <span>Nest</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span><img src="./images/menu.png" alt="" width="30px" /></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Product</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Category
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdown"
+                style="background-color: #4b788f"
+                id="CategoriesList"
+              >
+                <!-- <li><a class="dropdown-item" href="#">Samrt Phone</a></li>
+                <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
+                <li><a class="dropdown-item" href="#">Cameras</a></li>
+                <li><a class="dropdown-item" href="#">Fridge</a></li>
+                <li><a class="dropdown-item" href="#">AC</a></li>
+                <li><a class="dropdown-item" href="#">Samrt Watch</a></li>
+                <li><a class="dropdown-item" href="#">Headphone</a></li>
+                <li><a class="dropdown-item" href="#">Laptop</a></li>
+                <li><a class="dropdown-item" href="#">PC Moniter</a></li> -->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex" id="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+            <div class="icons">
+              <a href="login.html"
+                ><img src="./images/register.png" alt="" width="18px" />Login</a
+              >
+              <a href="register.html"
+                ><img src="./images/register.png" alt="" width="18px" />Register</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar -->
+    
+
+
+    
+<div class="container">
+  
+
+    <div class="py-5 text-center">
+      
+      <h2>Checkout form</h2>
+      <p class="lead"></p>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Payment Details</span>
+          <span class="badge badge-secondary badge-pill"></span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">SubTotal</h6>
+            </div>
+            <span class="text-muted" id="cart-subtotal"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Tax(14%)</h6>
+            </div>
+            <span class="text-muted" id="cart-tax"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Shipping</h6>
+            </div>
+            <span class="text-muted" id="cart-shipping"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between" >
+            <span>Total (USD)</span>
+            <strong id="cart-total"></strong>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">Billing address</h4>
+        <form onsubmit="placeOrder(event)">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+          </div>
+  
+          
+  
+          <div class="mb-3">
+            <label for="email">Email <span class="text-muted">(Optional)</span></label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="invalid-feedback">
+              Please enter a valid email address for shipping updates.
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+            <div class="invalid-feedback">
+              Please enter your shipping address.
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <label for="country">Country</label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">Egypt</option>
+                <option value="2">USA</option>
+                <option value="3">UK</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="state">State</label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">Cairo</option>
+                <option value="2">Giza</option>
+                <option value="3">Alexandria</option>
+              </select>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="zip">Zip</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="same-address">
+            <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="save-info">
+            <label class="custom-control-label" for="save-info">Save this information for next time</label>
+          </div>
+          <hr class="mb-4">
+  
+          <h4 class="mb-3">Payment</h4>
+  
+          <div class="d-block my-3">
+            <div class="custom-control custom-radio">
+              <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="credit">Cash On Delivery</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" >
+              <label class="custom-control-label" for="debit">Debit card</label>
+            </div>
+           
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">Name on card</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="">
+              <small class="text-muted">Full name as displayed on card</small>
+              <div class="invalid-feedback">
+                Name on card is required
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="cc-number">Credit card number</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="">
+              <div class="invalid-feedback">
+                Credit card number is required
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label for="cc-expiration">Expiration</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="">
+              <div class="invalid-feedback">
+                Expiration date required
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="cc-cvv">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="">
+              <div class="invalid-feedback">
+                Security code required
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4">
+          <button class="btn btn-primary " type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+   
+
+        <div id="liveAlertPlaceholder"></div>
+  </div>
+
+  <!-- footer -->
+ <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Electronic Shop</h3>
+            <p>
+              Karachi <br />
+              Sindh <br />
+              Pakistan <br />
+            </p>
+            <strong>Phone:</strong> +000000000000000 <br />
+            <strong>Email:</strong> electronicshop@.com <br />
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Usefull Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policey</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+
+            <ul>
+              <li><a href="#">PS 5</a></li>
+              <li><a href="#">Computer</a></li>
+              <li><a href="#">Gaming Laptop</a></li>
+              <li><a href="#">Mobile Phone</a></li>
+              <li><a href="#">Gaming Gadget</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia,
+              quibusdam.
+            </p>
+
+            <div class="socail-links mt-3">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-skype"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Electronic Shop</span></strong
+        >. All Rights Reserved
+      </div>
+      <div class="credits">Designed by <a href="#">ITI Trainee</a></div>
+    </div>
+  </footer>
+  <!-- footer -->
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="JS/Fetch.js"></script>
+    <script src="JS/Stock_Quantity.js"></script>
+    <script src="JS/regist.js"></script>
+    <script src="JS/checkout.js"></script>
+    <script src="JS/constantCategory.js"></script>
+
+  </body>
+</html>
